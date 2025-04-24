@@ -1,0 +1,153 @@
+.snake-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game-area {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.game-canvas {
+  border: 3px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.score-display {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+}
+
+.game-overlay h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
+
+.instructions {
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.instructions ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.instructions li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Mobile controls for touch devices */
+.mobile-controls {
+  display: none;
+  margin-top: 20px;
+}
+
+.control-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 5px;
+}
+
+.control-button {
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.up-btn {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.left-btn {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.right-btn {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.down-btn {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .game-canvas {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .mobile-controls {
+    display: block;
+  }
+}
