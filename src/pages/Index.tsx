@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/snake.css";
 
 const Index = () => {
@@ -185,6 +186,12 @@ const Index = () => {
           <li>Avoid hitting the walls or yourself</li>
           <li>The game gets faster as you eat more food</li>
         </ul>
+      </div>
+
+      <div className="mt-6">
+        <Link to="/workflow-chart" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          View Department Workflow Chart
+        </Link>
       </div>
     </div>
   );
